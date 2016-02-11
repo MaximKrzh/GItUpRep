@@ -1,0 +1,13 @@
+$ git log
+commit 9273b18ef72b0d07ad37d46b811aa0aeaa440aa7
+Author: Maxim Karzhavin <maxforuniverse@gmail.com>
+Date:   Thu Feb 11 19:30:51 2016 +0300
+
+     Add status.txt
+
+commit b0fd1eceb7764dc4b58cfc6a4c2465b55063982c
+Author: Maxim Karzhavin <maxforuniverse@gmail.com>
+Date:   Thu Feb 11 19:28:33 2016 +0300
+
+    Add .gitignore
+
