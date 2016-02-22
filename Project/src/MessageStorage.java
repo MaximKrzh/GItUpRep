@@ -24,7 +24,7 @@ public class MessageStorage {
             this.file = new FileWriter(filename);
             JSONObject obj = new JSONObject();
             JSONArray list = new JSONArray();
-            for (Message m : ml) {
+            for (Message m : this.ml) {
                 list.add(m);
             }
             obj.put("messages", list);
@@ -43,7 +43,6 @@ public class MessageStorage {
 
             Object obj = parser.parse(new FileReader(filename));
             JSONObject jsonObject = (JSONObject) obj;
-          //  ml.clear();
 
             JSONArray msg = (JSONArray) jsonObject.get("messages");
             for (Object jo : msg) {

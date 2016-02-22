@@ -7,18 +7,12 @@ import java.util.List;
 
 public class LogStatistic {
     private String request;
-    private Integer mescounter;
+    private Integer mesCounter;
     static FileWriter writer;
-/*
-    public LogStatistic() {
-        mescounter = 0;
-        request = "";
-    }
-*/
 
-    LogStatistic(String request, Integer mescounter) {
+    LogStatistic(String request, Integer mesCounter) {
         this.request = request;
-        this.mescounter = mescounter;
+        this.mesCounter = mesCounter;
 
 
     }
@@ -30,7 +24,6 @@ public class LogStatistic {
             Timestamp timeStamp = Timestamp.valueOf(ldt);
             writer.append(" Chat log time : ").append(timeStamp.toString()).append("\n");
             for (LogStatistic ls : lstl) {
-
                 writer.append(ls.toString()).append("\n");
             }
             writer.append("---------------------------------------------------\n");
@@ -42,7 +35,7 @@ public class LogStatistic {
     }
 
     public String toString() {
-        return this.request + " " + this.mescounter;
+        return this.request + " " + this.mesCounter;
     }
 
 }

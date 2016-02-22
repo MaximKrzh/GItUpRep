@@ -45,8 +45,6 @@ public class Message {
     public Message() {
     }
 
-    ;
-
     public Message(String author, String text) {
 
         this.author = author;
