@@ -1,22 +1,34 @@
-
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-import org.json.simple.parser.ParseException;
 import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.Timestamp;
-import java.util.*;
-import java.util.regex.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class MessageStorage {
 
-    public List<Message> ml = new LinkedList<>();
-    FileWriter file;
+    private List<Message> ml = new ArrayList<>();
+    private List<LogStatistic> logstatlist = new ArrayList<>();
+    private FileWriter file;
 
-    public List<LogStatistic> logstatlist = new LinkedList<>();
+
+    List<LogStatistic> getLogstatlist (){
+        return this.logstatlist;
+    }
+
+    List<Message> getMessageList (){
+        return this.ml;
+    }
+
 
     void write(String filename) throws ParseException {
         try {
@@ -24,14 +36,15 @@ public class MessageStorage {
             this.file = new FileWriter(filename);
             JSONObject obj = new JSONObject();
             JSONArray list = new JSONArray();
-            for (Message m : this.ml) {
+            for (Message m : ml) {
                 list.add(m);
             }
             obj.put("messages", list);
-            file.write(obj.toJSONString());
+            file.write(list.toJSONString());
             file.flush();
             file.close();
         } catch (IOException e) {
+            logstatlist.add(new LogStatistic(e.toString(), 1));
             e.printStackTrace();
         }
     }
@@ -52,8 +65,10 @@ public class MessageStorage {
 
         } catch (FileNotFoundException e) {
             System.out.println("File not found");
+            logstatlist.add(new LogStatistic("File not found", 1));
         } catch (IOException | ParseException e) {
             System.out.println("Invalid name");
+            logstatlist.add(new LogStatistic("Invalid file name", 1));
         }
 
     }
@@ -95,6 +110,7 @@ public class MessageStorage {
             if (message.getAuthor().compareTo(author) == 0)
                 alm.add(message);
         }
+
         logstatlist.add(new LogStatistic("foundByAuthor", alm.size()));
         return alm;
     }
@@ -114,17 +130,24 @@ public class MessageStorage {
     }
 
     ArrayList<Message> findByRegex(String regex) {
-
         ArrayList<Message> alm = new ArrayList<>();
-        Pattern p = Pattern.compile(regex);
-        Matcher m;
-        for (Message message : ml) {
-            m = p.matcher(message.getMessageText());
-            if (m.find())
-                alm.add(message);
+        try {
+
+            Pattern p = Pattern.compile(regex);
+            Matcher m;
+            for (Message message : ml) {
+                m = p.matcher(message.getMessageText());
+                if (m.find())
+                    alm.add(message);
+            }
+            logstatlist.add(new LogStatistic("foundByRegex " + regex, alm.size()));
+
+            return alm;
+        } catch (IllegalArgumentException e) {
+
+            logstatlist.add(new LogStatistic("Error. Illegal argument ex ", 1));
         }
-        logstatlist.add(new LogStatistic("foundByRegex " + regex, alm.size()));
-        return alm;
+        return null;
     }
 
     ArrayList<Message> findByTimeRange(String from, String to) {

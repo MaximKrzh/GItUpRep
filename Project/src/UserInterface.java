@@ -3,13 +3,28 @@ import org.json.simple.parser.ParseException;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 
-public class UserInterface { //наследование
+public class UserInterface {
 
-    MessageStorage ms = new MessageStorage();
+    private MessageStorage ms ;
+
+    public UserInterface (){
+        this.ms = new MessageStorage();
+    }
+
+    MessageStorage getMessageStorage (){
+        return this.ms;
+    }
+
+    //Scanner sc;
+    //public UserInterface (){
+    //    this.ms = new MessageStorage();
+    //    this.sc = new Scanner(System.in);
+    //}
 
     void add() {
         String author, messageText;
@@ -24,7 +39,7 @@ public class UserInterface { //наследование
         if (messageText.length() > 0) {
             this.ms.addMessage(new Message(id, author, messageText, timeStamp));
         } else {
-            this.ms.logstatlist.add(new LogStatistic("Error. Message length ", 0));
+            this.ms.getLogstatlist().add(new LogStatistic("Error. Message length ", 1));
         }
     }
 
@@ -34,9 +49,8 @@ public class UserInterface { //наследование
         try {
             id = sc.nextInt();
             return (this.ms.deleteMessage(id));
-
         } catch (InputMismatchException e) {
-            this.ms.logstatlist.add(new LogStatistic("Error. InputMismatchException ", 1));
+            this.ms.getLogstatlist().add(new LogStatistic("Error. InputMismatchException ", 1));
             System.out.println("inavlid data");
         }
         return false;
@@ -46,7 +60,9 @@ public class UserInterface { //наследование
         String regex;
         Scanner sc = new Scanner(System.in);
         regex = sc.nextLine();
-        System.out.println(this.ms.findByRegex(regex));
+        ArrayList<Message> aml = this.ms.findByRegex(regex);
+        //sc.close();
+        System.out.println(aml!=null ? aml : "Error. Wrong regex");
 
     }
 
@@ -54,6 +70,7 @@ public class UserInterface { //наследование
         String text;
         Scanner sc = new Scanner(System.in);
         text = sc.nextLine();
+        //sc.close();
         System.out.println(this.ms.findText(text));
     }
 
@@ -61,6 +78,7 @@ public class UserInterface { //наследование
         String author;
         Scanner sc = new Scanner(System.in);
         author = sc.nextLine();
+       // sc.close();
         System.out.println(this.ms.findByAuthor(author));
 
     }
@@ -81,11 +99,12 @@ public class UserInterface { //наследование
 
     }
 
-    void findByTimeRange() throws IllegalArgumentException {
+    void findByTimeRange()  {
         String from, to;
         Scanner sc = new Scanner(System.in);
         from = sc.nextLine();
         to = sc.nextLine();
+        //sc.close();
         try {
             System.out.println(ms.findByTimeRange(from, to));
         } catch (IllegalArgumentException e) {
@@ -93,7 +112,7 @@ public class UserInterface { //наследование
         }
     }
 
-    public static void main(String[] args) {
+    public void run() {
 
         UserInterface ui = new UserInterface();
         Scanner sc = new Scanner(System.in);
@@ -102,8 +121,8 @@ public class UserInterface { //наследование
 
         while (true) {
 
-            System.out.println("1 - add message | 2 - delete message | 3 - print all messages |" +
-                    " 4 - find text | 5 - find by regex \n6 - find by author | 7 - write to file " +
+            System.out.println(" 1 - add message | 2 - delete message | 3 - print all messages |" +
+                    " 4 - find text | 5 - find by regex \n 6 - find by author | 7 - write to file " +
                     "| 8 - read from file | 9 - find by time range | 0 - end program ");
 
             try {
@@ -124,7 +143,8 @@ public class UserInterface { //наследование
                 }
                 break;
                 case 3: {
-                    ui.ms.ml.forEach(System.out::println);
+                    ui.getMessageStorage().getMessageList().forEach(System.out::println);
+
                 }
                 break;
                 case 4: {
@@ -140,11 +160,11 @@ public class UserInterface { //наследование
                 }
                 break;
                 case 7: {
-                    ui.write("e:\\GitUp\\project\\test1.json");
+                    ui.write("test.json");
                 }
                 break;
                 case 8: {
-                    ui.read("e:\\GitUp\\project\\test1.json");
+                    ui.read("test.json");
                 }
                 break;
                 case 9: {
@@ -157,11 +177,11 @@ public class UserInterface { //наследование
                 }
             }
             if (i == 0) {
-                LogStatistic.write("e:\\GitUp\\project\\log.txt", ui.ms.logstatlist);
+                LogStatistic.write("log.txt", ui.getMessageStorage().getLogstatlist());
+                sc.close();
                 break;
             }
         }
-
         System.out.println("end");
     }
 }
