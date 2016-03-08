@@ -1,116 +1,91 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title> upchat.com </title>
-<meta charset="utf-8">
-<meta name="description" content=" Chat ">
-   
-<link rel="stylesheet" type="text/css" href="style.css"> 
+    <title> upchat.com </title>
+    <meta charset="utf-8">
+    <meta name="description" content=" Chat ">
 
-        
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="scripts.js"></script>
+
 </head>
-    
-<body >
 
-    <header>
+<body onload="run();">
+
+<header>
     <h1><p>Welcome to chat</p></h1>
-    </header>
-  
-    <div class="error">
-        <span>
-    <img src="error.png" > 
-            </span>
-    </div> 
-    
-    
-    
-    <div class="menu" id ="idmenu">
-      
-             
-        <span class="mbtns ">
-        <button class="menubutton"> History </button>
-        <button class="menubutton"> Edit </button>
-        <button class="menubutton"> Delete </button>
+</header>
+
+<div class="error">
+        <span id="errorId">
+            <img src="error.png">
         </span>
-      <span class="namechanger ">    <input id="nchange" class="input-changer" 
-               placeholder="enter nickname" >
-        <button  class ="chbtn"  id="nbtn"> change</button>  
-      </span>  
-            
-    </div>
+</div>
+
+<div class="chat">
+
+    <section class="section">
+
+        <div class="menu" id="idmenu">
+       
+      <span class="mbtns ">
+        <button class="mButton" id="historyId"> History</button>
+        <button class="mButton" id="editId"> Edit</button>
+        <button class="mButton" id="deleteId"> Delete</button>
+      </span>
         
+          
+      <span class="nameChanger "> 
+          <input class="chText" id="nchTextId" placeholder="enter nickname">
+          <button class="chButton" id="nchBtnId"> change</button>
+      </span>
 
-   <table class="tbl"  >
-       <tbody>
-       <tr class="mymsg"><td>
-          <div class="msgline">
-          <div class="author"> you <div class="message"> qwerty sd fs df sd f sdf s df sdf  </div></div>
-          </div>
-           
-     <!-- 
-            <td class="author" > you  </td>
-           <td class="msg"> message long  </td>
-           <div class="author"> you </div> 
-           <div class="msg"> some long message </div>
-    -->       
-      </td> </tr> 
-         
-        <tr class="notmymsg"><td>
-          <div class="msgline">
-          <div class="author"> someone <div class="message"> eeeeeeeeeeeeeeeeeeee  </div></div>
-          </div>       
-        </td></tr>
-           
-        <tr class="mymsg"><td>
-           <div class="msgline">
-            <div class="author"> you   <div class="message"> qwerty sd fs df sd f sdf s df sdf  </div></div>
-            </div>
-            </td>
-       </tr>  
-           
-           
-          <tr class="mydlted"><td class ="mes">
-           <div class="msgline">
-               <div class="author"> you   <div class="message"><strong>deleted</strong></div></div>
-            </div>
-            </td>
-       </tr>  
-           
-            <tr class="notmydlted"><td>
-           <div class="msgline">
-               <div class="author"> someone   <div class="message"><strong>deleted</strong></div></div>
-            </div>
-            </td>
-       </tr>  
-           
-           
-      
-       </tbody>    
-   </table>
-    
+        </div>
 
- <div class="msginput">
-    <div class="inputfield"> <textarea class="msg" id="msg" name="msg" rows="3" cols="auto" placeholder=" enter ur message " ></textarea> </div>    
-     <div class="inputbutton"><button class="inputbtn"> Send </button>
-     </div>
- </div>      
-    
-    
- <!-- 
- </div>
-<input type="button" id="send" value="Send">
-<textarea name="msg" id="msg"> </textarea>
-    <button>send</button>
--->
-    <footer class = "footer">
-        <div class = "inner footer ">
-            <div class="footer content"> 
-                <span >created by Maxim Krzh</span>
-              </div>
-        </div> 
-    </footer>
-    
-    
+        <div class="msgsList">
+            <ul class="msgList">
+                <li id="1081037296678" data-isdeleted="false" data-isedited="true" class="msg">
+                    <span class="msgAuthor" data-author="me">User</span><br>
+                    <span class="msgText">ййййййййййййййй</span>
+                </li>
+                <li id="594905401476" data-isdeleted="true" data-isedited="false" class="msg">
+                    <span class="msgAuthor" data-author="me">User</span><br>
+                    <span class="msgText">deleted</span>
+                </li>
+                <li id="683557886081" data-isdeleted="false" data-isedited="true" class="msg">
+                    <span class="msgAuthor" data-author="me">User</span><br>
+                    <span class="msgText">сбдсбдс</span>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="msginput">
+            <div class="inputfield">
+                <textarea id="msgInputId" type="text" class="msgInput" rows="3" cols="auto"
+                          placeholder="enter ur message"></textarea>
+
+            </div>
+            <div class="inputbutton">
+                <button id="inputbtnId" type="button" class="inputbtn"> Send</button>
+            </div>
+        </div>
+
+
+    </section>
+
+</div>
+
+
+<footer class="footer">
+    <div class="inner footer ">
+        <div class="footer content">
+            <span>created by Maxim Krzh</span>
+        </div>
+    </div>
+</footer>
+
+
 </body>
 </html>
 

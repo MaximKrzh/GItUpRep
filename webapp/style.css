@@ -1,105 +1,102 @@
-html { 
-  background: url(bckgr3.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+/*
+   *  черновая версия
+   *  будет пределана
+*/
+html {
+    background: url(bckgr.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     height: 100%;
     width: auto;
- 
-}
 
+}
 
 body {
     text-align: center;
-  
+
 }
 
-header{
+header {
     color: rgb(27, 163, 156);
     text-align: center;
-    
+
 }
 
-.namechanger{
-padding: 8px 15px;
-  display: inline-flex;
-    
-       
+.chat {
+
+    width: 50%;
+    margin: auto;
+    text-align: center;
+
 }
 
-.menubutton {
-        
+.section {
+    text-align: center;
+}
+
+.menu {
+    text-align: center;
+
+}
+
+.mbtns {
+    margin: 0%;
+    text-align: left;
+    display: inline-flex;
+
+}
+
+.nameChanger {
+    display: inline-flex;
+
+    text-align: right;
+    padding: 8px 15px;
+
+}
+
+.mButton {
     padding: 8px 15px;
     color: #fff;
     border-style: none;
     background-color: #83D6DE;
-/  /* border-color: #34495E;*/    
 }
-.chbtn{
-     padding: 8px 15px;
+
+.chButton {
+    padding: 8px 15px;
     color: #fff;
     border-style: none;
     background-color: #83D6DE;
 }
 
-
-#nchange{
-    border-style: none;
-    opacity: 0.8;
-    background-color:aliceblue;
-}
-
-.mbtns{
-    display: inline-flex;
-}
-
-
-
-
-
-.tbl {
+.msgList {
+    list-style-type: none;
     display: table;
-    margin: auto; 
+    margin: 0%;
     border-collapse: collapse;
     background-color: azure;
     opacity: 0.7;
- /*   background: rgba(51, 102, 153, .1);*/
-    width: 50%;
-    height: 350px ;
-    border-collapse: collapse; /*убираем пустые промежутки между ячейками*/
-    
-}
-
-
-
-
-.msginput{
-    width: 50%;
-    display:inline-flex;
-    margin: 2px;
-    padding: 2px;
-    opacity: 0.9;
-}
-.inputfield{
-    width: 85%; 
-    padding:0; 
-    margin:0 
-    
-}
-
-.msg{
+    /*   background: rgba(51, 102, 153, .1);*/
     width: 100%;
-    padding: 0;
-    margin:0
-    
+    height: 350px;
+    border-collapse: collapse; /*убираем пустые промежутки между ячейками*/
 }
 
-.inputbutton{
-    width: 15%;
+#errorId {
+    visibility: hidden;
 }
 
-.inputbtn{
+.msginput {
+    width: 100%;
+    display: inline-flex;
+
+    margin-top: 1%;
+    opacity: 0.9;
+
+}
+
+.inputbtn {
 
     color: #fff;
     border-style: solid;
@@ -107,35 +104,97 @@ padding: 8px 15px;
     border-color: #83D6DE;
     width: 100%;
     height: 47px
-    
+
 }
 
-.footer{
+.msgInput {
+    width: 100%;
+    padding: 0;
+    margin: 0
+
+}
+
+.msg {
+    text-align: left;
+    cursor: pointer;
+}
+
+.msgChecked {
+    background-color: #ff0a00;
+}
+
+.msgDeleted {
+
+}
+
+/*------------------------------------------------------------*/
+.namechanger {
+    padding: 8px 15px;
+    display: inline-flex;
+
+}
+
+.menubutton {
+
+    padding: 8px 15px;
+    color: #fff;
+    border-style: none;
+    background-color: #83D6DE;
+
+/ /* border-color: #34495E;*/
+}
+
+.chbtn {
+    padding: 8px 15px;
+    color: #fff;
+    border-style: none;
+    background-color: #83D6DE;
+}
+
+#nchange {
+    border-style: none;
+    opacity: 0.8;
+    background-color: aliceblue;
+}
+
+.inputfield {
+    width: 85%;
+    padding: 0;
+    margin: 0
+
+}
+
+.inputbutton {
+    width: 15%;
+}
+
+.footer {
     text-align: right;
-    font-family:cursive;
+    font-family: cursive;
     font-style: italic;
-    
+
     color: #031316;
-    
-    
-}
-.mymsg{
-    text-align: right;
-}
-.notmymsg{
-    text-align: left;
+
 }
 
-.mydlted{
+.mymsg {
     text-align: right;
 }
 
-.notmydlted{
+.notmymsg {
     text-align: left;
 }
 
-.error img{
-  opacity: 0.5;
-  height: 30px;
-  width: 30px;
+.mydlted {
+    text-align: right;
+}
+
+.notmydlted {
+    text-align: left;
+}
+
+.error img {
+    opacity: 0.5;
+    height: 30px;
+    width: 30px;
 }
