@@ -1,6 +1,6 @@
 /*
  *черновая версия .не совсем понятны отдельные пункты
-*/
+ */
 var isError = 1;
 var userName = 'User';
 
@@ -20,7 +20,7 @@ function delegateEvent(evtObj) {
     errorChecker(1);
 
     if (evtObj.type === 'click') {
-        if (evtObj.target.classList.contains('inputbtn')) {
+        if (evtObj.target.classList.contains('msg-send-button')) {
             onAddButtonClick(evtObj);
         } else if (evtObj.target.id === 'deleteId' /*classList.contains('delete')*/) {
             onDeleteButtonClick(evtObj);
@@ -154,7 +154,7 @@ function addTodo(value) {
         return;
     }
     var msg = createItem(value);
-    var msgList = document.getElementsByClassName('msgList')[0];
+    var msgList = document.getElementsByClassName('msgsList')[0];
     msgList.appendChild(msg);
 
 }

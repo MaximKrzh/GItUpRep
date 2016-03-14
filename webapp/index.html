@@ -4,10 +4,8 @@
     <title> upchat.com </title>
     <meta charset="utf-8">
     <meta name="description" content=" Chat ">
-
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="scripts.js"></script>
-
 </head>
 
 <body onload="run();">
@@ -27,23 +25,23 @@
     <section class="section">
 
         <div class="menu" id="idmenu">
-       
-      <span class="mbtns ">
+
+      <span class= "mButtons" > <!--   " mbtns "-->
         <button class="mButton" id="historyId"> History</button>
         <button class="mButton" id="editId"> Edit</button>
         <button class="mButton" id="deleteId"> Delete</button>
       </span>
-        
-          
-      <span class="nameChanger "> 
-          <input class="chText" id="nchTextId" placeholder="enter nickname">
-          <button class="chButton" id="nchBtnId"> change</button>
+
+
+      <span class="name-field">
+          <input class="nchText" id="nchTextId" placeholder="enter nickname">
+          <button class="nchButton" id="nchBtnId"> change</button>
       </span>
 
         </div>
 
-        <div class="msgsList">
-            <ul class="msgList">
+        <div class="chat-frame">
+            <ul class="msgsList">
                 <li id="1081037296678" data-isdeleted="false" data-isedited="true" class="msg">
                     <span class="msgAuthor" data-author="me">User</span><br>
                     <span class="msgText">ййййййййййййййй</span>
@@ -60,20 +58,17 @@
         </div>
 
 
-        <div class="msginput">
-            <div class="inputfield">
-                <textarea id="msgInputId" type="text" class="msgInput" rows="3" cols="auto"
-                          placeholder="enter ur message"></textarea>
-
+        <div class="input-msg-frame">
+            <div class="input-text-frame">
+                <textarea  class="msg-input-field" id="msgInputId" type="text" rows="3" cols="auto"
+                           placeholder="enter ur message"></textarea>
             </div>
-            <div class="inputbutton">
-                <button id="inputbtnId" type="button" class="inputbtn"> Send</button>
+            <div class="input-button-frame">
+                <button class="msg-send-button" id="inputbtnId" type="button" > Send</button>
             </div>
         </div>
 
-
     </section>
-
 </div>
 
 
@@ -85,7 +80,5 @@
     </div>
 </footer>
 
-
 </body>
 </html>
-
