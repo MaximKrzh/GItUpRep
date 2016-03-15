@@ -62,6 +62,7 @@ function errorChecker() {
 
 function onEditAuthor(e) {
     var aList = document.getElementsByClassName('msgAuthor');
+    var tn = userName;
     userName = document.getElementById('nchTextId').value;
     if (userName !== '') {
         for (var i = 0; i < aList.length; i++) {
@@ -70,6 +71,7 @@ function onEditAuthor(e) {
             }
         }
     }else{
+        userName=tn;
         alert("empty field")
     }
 }
