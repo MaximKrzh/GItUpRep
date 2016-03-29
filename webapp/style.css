@@ -123,22 +123,29 @@ header {
 
 }
 
-.msg[data-isDeleted="true"]{
-    background-color: #031316;
-    color: antiquewhite;
+.msg {
+    text-align: left;
+    cursor: pointer;
 
 }
 
 
-.msg [data-isedited="true"] {
-
-    text-align: left;
+.msg[data-isedited="true"] {
+    background: #1e522d;
     cursor: pointer;
 }
 
+.msg[data-isdeleted="true"] {
+    background: #524d4d;
+    cursor: pointer;
+}
+
+
+
 .msgChecked {
-    background-color: #ff0a00;
-    background-color: aliceblue;
+    /*background-color: #ff0a00;*/
+    background-color: #819ede;
+
 }
 
 .msgDeleted {

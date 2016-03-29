@@ -4,6 +4,63 @@
 var isError = 1;
 var userName = 'User';
 
+var msList = [];
+
+var theMessage = function(msgText, userName) {
+    return {
+        text: msgText,
+        name: userName,
+        id: uniqueId(),
+        isDeleted: false,
+        isEdited: false
+    };
+};
+
+
+function output(value) {
+    var output = document.getElementById('output');
+
+    output.innerText = "var taskList = " + JSON.stringify(value, null, 2) + ";";
+}
+
+function restore() {
+    if(typeof(Storage) == "undefined") {
+        alert('localStorage is not accessible');
+        return;
+    }
+
+    var item = localStorage.getItem("TODOs taskList");
+
+    return item && JSON.parse(item);
+}
+
+function store(listToSave) {
+    output(listToSave);
+
+    if(typeof(Storage) == "undefined") {
+        alert('localStorage is not accessible');
+        return;
+    }
+
+    localStorage.setItem("TODOs taskList", JSON.stringify(listToSave));
+}
+
+function restore() {
+    if (typeof(Storage) == "undefined") {
+        alert('localStorage is not accessible');
+        return;
+    }
+
+    var item = localStorage.getItem("TODOs taskList");
+
+    return item && JSON.parse(item);
+}
+
+
+
+
+
+
 var uniqueId = function () {
     var date = Date.now();
     var random = Math.random() * Math.random();
@@ -38,13 +95,11 @@ function delegateEvent(evtObj) {
             onEditAuthor(evtObj);
 
         }
-
         /*else	if(evtObj.type === 'click' && evtObj.target.classList.contains('msgChecked') ){
          cancel(evtObj);
          //onAddButtonClick(evtObj);
          }*/
     }
-
 }
 
 
@@ -59,15 +114,17 @@ function errorChecker() {
 
 }
 
-
 function onEditAuthor(e) {
     var aList = document.getElementsByClassName('msgAuthor');
     var tn = userName;
     userName = document.getElementById('nchTextId').value;
+   //document.getElementById('nchTextId').setAttribute( 'placeholder','enter nickname');
     if (userName !== '') {
         for (var i = 0; i < aList.length; i++) {
             if (aList[i].getAttribute('data-Author') === 'me') {
                 aList[i].innerHTML = userName;
+                document.getElementById('nchTextId').setAttribute( 'placeholder',userName);
+                document.getElementById('nchTextId').value='';
             }
         }
     }else{
@@ -91,7 +148,6 @@ function onCheckedButtonClick(e) {
     txt.className = 'msgChecked';
 
 }
-
 
 function onEditButtonClick(e) {
     var dmList = document.getElementsByClassName('msgChecked');
@@ -117,13 +173,6 @@ function onEditButtonClick(e) {
 
 function onDeleteButtonClick(e) {
 
-//	var chb = app.getElementsByClassName('item-check')[0];
-//	chb.checked=true;
-//	var todoText = document.getElementById(this.id);
-
-//	todoText.checked=true;
-//	addTodo(todoText.value);
-//	todoText.value = '';
     var dmList = document.getElementsByClassName('msgChecked');
 
     for (var i = 0; i < dmList.length; i++) {
@@ -134,15 +183,11 @@ function onDeleteButtonClick(e) {
         dmList[i].className = 'msg';
 
     }
-    //checkbox.setAttribute('type', 'checkbox');
-    //document.getElementById(e.target.id).innerHTML="Новый текст!";
-    //txt.className='msgChecked';
 
 //	alert(txt.className);
 //	alert(e.target.id); // удаление в две функции отметить кликом удалить в другой
 
 }
-
 
 function onAddButtonClick() {
     var todoText = document.getElementById('msgInputId');
