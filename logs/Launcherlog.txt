@@ -1,0 +1,11 @@
+2016-03-12 19:56:37.247: [by.bsu.up.chat.Launcher] Invalid command. Please see help
+2016-03-12 19:57:04.039: [by.bsu.up.chat.Launcher] Invalid command. Please see help
+2016-03-12 20:00:09.679: [by.bsu.up.chat.Launcher] Invalid command. Please see help
+2016-03-12 20:17:39.88: [by.bsu.up.chat.Launcher] Invalid command. Please see help
+2016-03-12 20:28:38.276: [by.bsu.up.chat.Launcher] Starting server on localhost...
+2016-03-12 20:28:38.351: [by.bsu.up.chat.Launcher] Could not launch server
+2016-03-12 20:28:48.57: [by.bsu.up.chat.Launcher] Starting server on localhost...
+2016-03-12 20:28:48.666: [by.bsu.up.chat.Launcher] Server started.
+2016-03-12 20:28:48.677: [by.bsu.up.chat.Launcher] Get list of messages: GET http://10.0.122.139:999/chat?token={token}
+2016-03-12 20:28:48.68: [by.bsu.up.chat.Launcher] Send message: POST http://10.0.122.139:999/chat provide body json in format {"message" : "{message}"}
+2016-03-12 20:30:22.009: [by.bsu.up.chat.Launcher] Connection to server by address localhost:999

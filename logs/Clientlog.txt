@@ -1,0 +1,5 @@
+2016-03-12 20:30:37.375: [by.bsu.up.chat.client.Client] Message from server: HI AZAZAZ 
+2016-03-12 20:30:46.42: [by.bsu.up.chat.client.Client] Message from server: I LOVE UP 
+2016-03-12 20:31:07.51: [by.bsu.up.chat.client.Client] Message from server: UP VAN LAV
+2016-03-12 20:31:27.604: [by.bsu.up.chat.client.Client] Message from server: so lets end and see whats happend
+2016-03-12 20:31:30.622: [by.bsu.up.chat.client.Client] Message from server: bb

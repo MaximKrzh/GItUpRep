@@ -1,0 +1,13 @@
+POST http://10.0.122.139:999/chat?token=TN59EN HTTP/1.1
+User-Agent: Composer
+Host: 10.0.122.139:999
+Content-Length: 30
+
+{"message":"mes from fiddler"}
+HTTP/1.1 200 OK
+Date: Mon, 04 Apr 2016 21:36:54 GMT
+Transfer-encoding: chunked
+Access-control-allow-origin: *
+
+0
+

@@ -1,0 +1,5 @@
+2016-03-12 20:30:37.172: [by.bsu.up.chat.server.ServerHandler] Received new message from user AZAZAZ: HI AZAZAZ 
+2016-03-12 20:30:46.33: [by.bsu.up.chat.server.ServerHandler] Received new message from user AZAZAZ: I LOVE UP 
+2016-03-12 20:31:07.425: [by.bsu.up.chat.server.ServerHandler] Received new message from user AZAZAZ: UP VAN LAV
+2016-03-12 20:31:26.932: [by.bsu.up.chat.server.ServerHandler] Received new message from user AZAZAZ: so lets end and see whats happend
+2016-03-12 20:31:30.17: [by.bsu.up.chat.server.ServerHandler] Received new message from user AZAZAZ: bb
