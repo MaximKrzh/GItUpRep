@@ -104,27 +104,8 @@ public class InMemoryMessageStorage implements MessageStorage {
 
         JSONArray jArr = new JSONArray();
 
-        //   MessageHelper.stringToJsonObject(jsonArrayString.toString());
         try {
-            //jsonArray = (JSONArray)  MessageHelper.stringToJsonObject(jsonArrayString.toString());
-
-            //  JSONObject o = (JSONObject) jsonParser.parse(jsonArrayString.toString());
-            //  jsonArray.add(jsonParser.parse(str.toString()));
-            //  jsonArray = (JSONArray) jsonParser.parse(str.toString());
-            //   jsonArray.add(new JSONParser().parse(str.toString()));
-          /*
-                         JSONParser jsonParser = new JSONParser();
-                         System.out.println(str.toString());
-                         JSONArray jarr = (JSONArray) jsonParser.parse(str.toString());
-                         System.out.println(jsonParser.parse(str.toString().toString()));
-            */
-            //     jsonArray.add(o);
-            //     System.out.println("___________________________________");
-
             jArr = (JSONArray) new JSONParser().parse(str.toString());
-
-            System.out.println(jArr.toString());
-            //  jsonArray.add(jsonParser.parse(jsonArrayString.toString()));
 
         } catch (ParseException e) {
             logger.error("Parsing message failed.", e);
