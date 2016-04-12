@@ -16,7 +16,7 @@ import java.util.List;
 
 public class InMemoryMessageStorage implements MessageStorage {
 
-    private static final String DEFAULT_PERSISTENCE_FILE = "messages228.srg";
+    private static final String DEFAULT_PERSISTENCE_FILE = "messages227.srg";
 
     private static final Logger logger = Log.create(InMemoryMessageStorage.class);
 
