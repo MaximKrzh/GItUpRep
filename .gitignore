@@ -1,6 +1,7 @@
 *.iml
 .idea/
 out/
+bin/
 log.txt
 test1.json
 src/Main.java
