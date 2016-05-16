@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css"/>
+    <script src="script.js"></script>
+
+</head>
+<body onload="run();">
+    <main class = "main-chat-frame">
+
+        <div class ="input-msg-frame">
+            <img class="icon" id="errorIcon" src="1463268484_Warning.png" width="35" height="35"  >
+            <input  class = "name-change-text" id = "nch-text" type = "text">
+            <button class = "nch-button" type = "button" >change</button>
+        </div>
+        <div class = "chat-frame" id="idFrame">
+            <ul id="mes-list" class="mes-list" >
+            </ul>
+        </div>
+        <div class= "send-message-frame">
+            <input id ="message-text-field" type = "text" class="mt-field" placeholder="enter you message">
+            <button  type="button" class="send-button">Send</button>
+        </div>
+
+        <div id="messageTemplate">
+                <li class="temp-name" data-message-id = "identifier">
+                    <img class="editIcon" src="Design-89.png" width="17" height="17" onclick="onEdit(this)">
+                    <img class="deleteIcon" src="general-09.png" width="17" height="17" onclick="onDelete(this)">
+                    <br/>
+                    <img class="editedIcon" src="Design-88.png" width="17" height="17">
+                    <img class="deletedIcon" src="general-02.png" width="17" height="17">
+                </li>
+        </div>
+        <div id="mes-change-frame" class="mes-change-frame">
+            <div>
+                <textarea class="nch-text" id="mch-text-field" type="text" placeholder="enter ur message"></textarea>
+                <button class="e-button" id="ok" type="button">Ok</button>
+                <button class="e-button" id="cancel">Cancel</button>
+
+            </div>
+        </div>
+
+    </main>
+</body>
+</html>

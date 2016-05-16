@@ -1,0 +1,152 @@
+2016-05-16 21:00:23.486: [by.bsu.up.chat.Launcher] Port is not specified. Starting Server on default port 8080
+
+2016-05-16 21:00:23.536: [by.bsu.up.chat.Launcher] Starting server on localhost...
+
+2016-05-16 21:00:23.56: [by.bsu.up.chat.Launcher] Could not launch server
+2016-05-16 21:00:40.858: [by.bsu.up.chat.Launcher] Port is not specified. Starting Server on default port 8080
+
+2016-05-16 21:00:40.863: [by.bsu.up.chat.Launcher] Starting server on localhost...
+
+2016-05-16 21:00:40.971: [by.bsu.up.chat.Launcher] Server started.
+
+2016-05-16 21:00:40.984: [by.bsu.up.chat.Launcher] Get list of messages: GET http://10.0.122.139:8080/chat?token={token}
+
+2016-05-16 21:00:40.988: [by.bsu.up.chat.Launcher] Send message: POST http://10.0.122.139:8080/chat provide body json in format {"id" : "1", "author":"User1", "text":"Hello, all!", "timestamp":1459169330000}
+
+2016-05-16 21:02:25.813: [by.bsu.up.chat.Launcher] Port is not specified. Starting Server on default port 8080
+
+2016-05-16 21:02:25.816: [by.bsu.up.chat.Launcher] Starting server on localhost...
+
+2016-05-16 21:02:25.899: [by.bsu.up.chat.Launcher] Server started.
+
+2016-05-16 21:02:25.91: [by.bsu.up.chat.Launcher] Get list of messages: GET http://10.0.122.139:8080/chat?token={token}
+
+2016-05-16 21:02:25.912: [by.bsu.up.chat.Launcher] Send message: POST http://10.0.122.139:8080/chat provide body json in format {"id" : "1", "author":"User1", "text":"Hello, all!", "timestamp":1459169330000}
+
+2016-05-16 21:02:37.84: [by.bsu.up.chat.server.ServerHandler]  sended mes : Message{id='119114412944', author='User', timestamp='21:02:37', text='zxcm', edited='false', deleted='false'}
+
+2016-05-16 21:05:44.724: [by.bsu.up.chat.Launcher] Port is not specified. Starting Server on default port 8080
+
+2016-05-16 21:05:44.729: [by.bsu.up.chat.Launcher] Starting server on localhost...
+
+2016-05-16 21:05:44.848: [by.bsu.up.chat.Launcher] Server started.
+
+2016-05-16 21:05:44.86: [by.bsu.up.chat.Launcher] Get list of messages: GET http://10.0.122.139:8080/chat?token={token}
+
+2016-05-16 21:05:44.864: [by.bsu.up.chat.Launcher] Send message: POST http://10.0.122.139:8080/chat provide body json in format {"id" : "1", "author":"User1", "text":"Hello, all!", "timestamp":1459169330000}
+
+2016-05-16 21:11:00.411: [by.bsu.up.chat.Launcher] Port is not specified. Starting Server on default port 8080
+
+2016-05-16 21:11:00.415: [by.bsu.up.chat.Launcher] Starting server on localhost...
+
+2016-05-16 21:11:00.497: [by.bsu.up.chat.Launcher] Server started.
+
+2016-05-16 21:11:00.507: [by.bsu.up.chat.Launcher] Get list of messages: GET http://10.0.122.139:8080/chat?token={token}
+
+2016-05-16 21:11:00.51: [by.bsu.up.chat.Launcher] Send message: POST http://10.0.122.139:8080/chat provide body json in format {"id" : "1", "author":"User1", "text":"Hello, all!", "timestamp":1459169330000}
+
+2016-05-16 21:11:20.687: [by.bsu.up.chat.server.ServerHandler]  sended mes : Message{id='347979020300', author='User', timestamp='21:11:20', text='чсмьчбсьм', edited='false', deleted='false'}
+
+2016-05-16 21:11:49.442: [by.bsu.up.chat.server.ServerHandler]  sended mes : Message{id='797593918416', author='смл', timestamp='21:11:49', text='сбмсьм', edited='false', deleted='false'}
+
+2016-05-16 21:22:43.162: [by.bsu.up.chat.Launcher] Port is not specified. Starting Server on default port 8080
+
+2016-05-16 21:22:43.166: [by.bsu.up.chat.Launcher] Starting server on localhost...
+
+2016-05-16 21:22:43.245: [by.bsu.up.chat.Launcher] Server started.
+
+2016-05-16 21:22:43.256: [by.bsu.up.chat.Launcher] Get list of messages: GET http://10.0.122.139:8080/chat?token={token}
+
+2016-05-16 21:22:43.259: [by.bsu.up.chat.Launcher] Send message: POST http://10.0.122.139:8080/chat provide body json in format {"id" : "1", "author":"User1", "text":"Hello, all!", "timestamp":1459169330000}
+
+2016-05-16 21:23:50.43: [by.bsu.up.chat.server.ServerHandler]  sended mes : Message{id='39585708739', author='User', timestamp='21:23:50', text='чсьмчсбм', edited='false', deleted='false'}
+
+2016-05-16 21:23:56.73: [by.bsu.up.chat.server.ServerHandler]  sended mes : Message{id='5400857429', author='User', timestamp='21:23:56', text='с.бьмьсм', edited='false', deleted='false'}
+
+2016-05-16 21:29:12.549: [by.bsu.up.chat.Launcher] Port is not specified. Starting Server on default port 8080
+
+2016-05-16 21:29:12.557: [by.bsu.up.chat.Launcher] Starting server on localhost...
+
+2016-05-16 21:29:12.683: [by.bsu.up.chat.Launcher] Server started.
+
+2016-05-16 21:29:12.697: [by.bsu.up.chat.Launcher] Get list of messages: GET http://10.0.122.139:8080/chat?token={token}
+
+2016-05-16 21:29:12.701: [by.bsu.up.chat.Launcher] Send message: POST http://10.0.122.139:8080/chat provide body json in format {"id" : "1", "author":"User1", "text":"Hello, all!", "timestamp":1459169330000}
+
+2016-05-16 21:29:29.29: [by.bsu.up.chat.server.ServerHandler]  sended mes : Message{id='422888710454', author='User', timestamp='21:29:29', text='ячбюьс', edited='false', deleted='false'}
+
+2016-05-16 21:42:11.655: [by.bsu.up.chat.Launcher] Port is not specified. Starting Server on default port 8080
+
+2016-05-16 21:42:11.659: [by.bsu.up.chat.Launcher] Starting server on localhost...
+
+2016-05-16 21:42:11.738: [by.bsu.up.chat.Launcher] Server started.
+
+2016-05-16 21:42:11.749: [by.bsu.up.chat.Launcher] Get list of messages: GET http://10.0.122.139:8080/chat?token={token}
+
+2016-05-16 21:42:11.752: [by.bsu.up.chat.Launcher] Send message: POST http://10.0.122.139:8080/chat provide body json in format {"id" : "1", "author":"User1", "text":"Hello, all!", "timestamp":1459169330000}
+
+2016-05-16 21:45:35.479: [by.bsu.up.chat.Launcher] Port is not specified. Starting Server on default port 8080
+
+2016-05-16 21:45:35.484: [by.bsu.up.chat.Launcher] Starting server on localhost...
+
+2016-05-16 21:45:35.617: [by.bsu.up.chat.Launcher] Server started.
+
+2016-05-16 21:45:35.634: [by.bsu.up.chat.Launcher] Get list of messages: GET http://10.0.122.139:8080/chat?token={token}
+
+2016-05-16 21:45:35.638: [by.bsu.up.chat.Launcher] Send message: POST http://10.0.122.139:8080/chat provide body json in format {"id" : "1", "author":"User1", "text":"Hello, all!", "timestamp":1459169330000}
+
+2016-05-16 21:48:09.971: [by.bsu.up.chat.Launcher] Port is not specified. Starting Server on default port 8080
+
+2016-05-16 21:48:09.975: [by.bsu.up.chat.Launcher] Starting server on localhost...
+
+2016-05-16 21:48:10.108: [by.bsu.up.chat.Launcher] Server started.
+
+2016-05-16 21:48:10.126: [by.bsu.up.chat.Launcher] Get list of messages: GET http://10.0.122.139:8080/chat?token={token}
+
+2016-05-16 21:48:10.138: [by.bsu.up.chat.Launcher] Send message: POST http://10.0.122.139:8080/chat provide body json in format {"id" : "1", "author":"User1", "text":"Hello, all!", "timestamp":1459169330000}
+
+2016-05-16 21:48:23.943: [by.bsu.up.chat.server.ServerHandler]  sended mes : Message{id='480047054183', author='User', timestamp='21:48:23', text='xclkv;lcxkv', edited='false', deleted='false'}
+
+2016-05-16 22:01:10.757: [by.bsu.up.chat.Launcher] Port is not specified. Starting Server on default port 8080
+
+2016-05-16 22:01:10.762: [by.bsu.up.chat.Launcher] Starting server on localhost...
+
+2016-05-16 22:01:10.916: [by.bsu.up.chat.Launcher] Server started.
+
+2016-05-16 22:01:10.939: [by.bsu.up.chat.Launcher] Get list of messages: GET http://10.0.122.139:8080/chat?token={token}
+
+2016-05-16 22:01:10.943: [by.bsu.up.chat.Launcher] Send message: POST http://10.0.122.139:8080/chat provide body json in format {"id" : "1", "author":"User1", "text":"Hello, all!", "timestamp":1459169330000}
+
+2016-05-16 22:01:19.831: [by.bsu.up.chat.server.ServerHandler]  sended mes : Message{id='255644869609', author='User', timestamp='22:01:19', text='x;lmvcmv', edited='false', deleted='false'}
+
+2016-05-16 22:01:48.763: [by.bsu.up.chat.server.ServerHandler]  sended mes : Message{id='226452176765', author='.x,mc', timestamp='22:01:48', text='x,.cxmc', edited='false', deleted='false'}
+
+2016-05-16 22:03:40.386: [by.bsu.up.chat.Launcher] Starting server on localhost...
+
+2016-05-16 22:03:40.407: [by.bsu.up.chat.Launcher] Could not launch server
+2016-05-16 22:04:47.693: [by.bsu.up.chat.Launcher] Starting server on localhost...
+
+2016-05-16 22:04:47.787: [by.bsu.up.chat.Launcher] Server started.
+
+2016-05-16 22:04:47.802: [by.bsu.up.chat.Launcher] Get list of messages: GET http://10.0.122.139:8080/chat?token={token}
+
+2016-05-16 22:04:47.802: [by.bsu.up.chat.Launcher] Send message: POST http://10.0.122.139:8080/chat provide body json in format {"id" : "1", "author":"User1", "text":"Hello, all!", "timestamp":1459169330000}
+
+2016-05-16 22:05:11.658: [by.bsu.up.chat.server.ServerHandler]  sended mes : Message{id='1232206074292', author='User', timestamp='22:05:11', text='С‡СЋР±СЃСЊРј', edited='false', deleted='false'}
+
+2016-05-16 22:06:00.944: [by.bsu.up.chat.Launcher] Starting server on localhost...
+
+2016-05-16 22:06:01.038: [by.bsu.up.chat.Launcher] Server started.
+
+2016-05-16 22:06:01.038: [by.bsu.up.chat.Launcher] Get list of messages: GET http://10.0.122.139:8080/chat?token={token}
+
+2016-05-16 22:06:01.054: [by.bsu.up.chat.Launcher] Send message: POST http://10.0.122.139:8080/chat provide body json in format {"id" : "1", "author":"User1", "text":"Hello, all!", "timestamp":1459169330000}
+
+2016-05-16 22:06:51.219: [by.bsu.up.chat.server.ServerHandler]  sended mes : Message{id='388253897021', author='User', timestamp='22:06:51', text='Hello, it's me', edited='false', deleted='false'}
+
+2016-05-16 22:07:18.194: [by.bsu.up.chat.server.ServerHandler]  sended mes : Message{id='782288966051', author='User2', timestamp='22:07:18', text='I was wondering if after all these years', edited='false', deleted='false'}
+
+2016-05-16 22:07:55.176: [by.bsu.up.chat.server.ServerHandler]  sended mes : Message{id='363357986714', author='User3', timestamp='22:07:55', text='You'd like to meet, to go over everything', edited='false', deleted='false'}
+
+2016-05-16 22:08:25.419: [by.bsu.up.chat.server.ServerHandler]  sended mes : Message{id='318384810086', author='User3', timestamp='22:08:25', text='11', edited='false', deleted='false'}
+
