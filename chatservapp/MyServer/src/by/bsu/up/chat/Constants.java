@@ -2,7 +2,7 @@ package by.bsu.up.chat;
 
 public interface Constants {
     String PROTOCOL = "http";
-    String CONTEXT_PATH = "/chat";
+    String CONTEXT_PATH = "/chat";//
 
     String REQUEST_METHOD_GET = "GET";
     String REQUEST_METHOD_POST = "POST";
