@@ -50,28 +50,19 @@ public class InMemoryMessageStorage implements MessageStorage {
 
     @Override
     public boolean updateMessage(Message message) {
-        for (Message m : messages) {
-            if (m.getId().equals(message.getId())) {
-                m.setText(message.getText());
-                m.setEdited(true);
-                updateHistory();
-                return true;
-            }
-        }
-        return false;
+        Boolean checker=false;
+        messages.forEach( m -> {if(m.getId().equals(message.getId()) ) {m.setText(message.getText());m.setEdited(true);
+                                updateHistory();checker.parseBoolean("true");}}
+        );
+        return checker;
     }
 
     @Override
     public synchronized boolean removeMessage(String messageId) {
-        for (Message m : messages) {
-            if (m.getId().equals(messageId)) {
-                m.setText("deleted");
-                m.setDeleted(true);
-                updateHistory();
-                return true;
-            }
-        }
-        return false;
+        Boolean checker=false;
+        messages.forEach( m -> { if(m.getId().equals(messageId)){ m.setText("deleted");
+                                m.setDeleted(true); updateHistory();checker.parseBoolean("true");}});
+        return checker;
     }
 
     @Override
