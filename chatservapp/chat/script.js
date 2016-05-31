@@ -2,6 +2,7 @@ var name = 'User';
 var appState = {
     mainUrl: 'http://localhost:8080/chat',
     messageList: [],
+    messageListForResponse: [],
     isConnected : void 0,
     token: 'TN11EN'
 };
@@ -30,11 +31,33 @@ function run() {
     var appContainer = document.getElementsByClassName('main-chat-frame')[0];
     appContainer.addEventListener('click', delegateEvent);
     loadName();
+    connect();
+    /*
     if (!appState.isConnected){
         connect()
     }
+    */
 }
 
+function connect() {
+    if (appState.isConnected) {
+        return;
+    }
+
+    whileConnected();
+}
+function whileConnected() {
+    appState.isConnected = setTimeout(function () {
+            loadMessages(function () {
+                render(appState);
+                whileConnected()
+            });/*);
+            render(appState);
+            whileConnected();*/
+    }, 1000);
+}
+
+/*
 function connect() {
     appState.isConnected = setTimeout(function () {
             loadMessages();
@@ -42,7 +65,7 @@ function connect() {
             connect();
     }, 500);
 }
-
+*/
 function delegateEvent(evtObj) {
     if (evtObj.type === 'click' && evtObj.target.classList.contains('nch-button')) {
         onNchButton(evtObj);
@@ -66,7 +89,7 @@ function onSendButtonClick() {
     if (mes == "" || mes == null)
         return;
     addMessage(new createMessage(name, mes, getTime(), false, false));
-    document.getElementById("idFrame").scrollTop +=9999;
+
 
 }
 
@@ -122,13 +145,35 @@ function onDelete(element) {
     deleteMessage(id);
 }
 
-function loadMessages( ) {
-    var url = appState.mainUrl + '?token=' + appState.token;
+function loadMessages(done ) {
+   var url = appState.mainUrl + '?token=' + appState.token;
     ajax('GET', url, null, function (responseText) {
         var response = JSON.parse(responseText);
         appState.messageList = response.messages;
+
+        done();
     });
 
+    /*
+    var url = appState.mainUrl + '?token=' + appState.token;
+    ajax('GET', url, null, function (responseText) {
+        var response = JSON.parse(responseText);
+        appState.token = response.token;
+
+        if (response.messages.length > 0) {
+            if (appState.messageList.length == 0) {
+                appState.messageList = response.messages;
+            }
+            appState.messageListForResponse = response.messages;
+        }
+
+        if (appState.token != response.token) {
+            appState.token = response.token;
+            render(appState);
+        }
+        done();
+    });
+*/
 }
 
 function ajax(method, url, data, continueWith) {
@@ -145,18 +190,22 @@ function ajax(method, url, data, continueWith) {
             appState.isConnected = void 0;
             connect();
             return;
+        }else{
+            document.getElementById('errorIcon').style.visibility = "hidden";
         }
-        continueWith(xhr.responseText);
+        if (continueWith != null) {
+            continueWith(xhr.responseText);
+        }
     };
 
     var errorIcon = document.getElementById('errorIcon');
 
     xhr.onerror = function (e) {
-        errorIcon.style.visibility = (errorIcon.style.visibility == "visible") ? "hidden" : "visible";
+        errorIcon.style.visibility =  "visible";
         appState.isConnected = void 0;
         connect();
     };
-    errorIcon.style.visibility = "hidden";
+  //  errorIcon.style.visibility = "hidden";
 
     xhr.send(data);
 }
@@ -197,6 +246,7 @@ function appendToList(list, messageList, messageMap) {
         var child = elementFromTemplate('messageTemplate');
         renderMessageState(child, message);
         list.appendChild(child);
+        document.getElementById("idFrame").scrollTop +=1000;
     }
 }
 
